@@ -17,7 +17,7 @@ export class CandidateJobPipe implements PipeTransform {
       );
 
       allJobs.map(job => {
-        job.description = 'The title match to yours'
+        job.description = 'The title match to your title'
         if (candidate.skills && candidate.skills.some(skill => skill.id == job.skill.id)) {
           job.description += ' and you have the needed skill'
         }
