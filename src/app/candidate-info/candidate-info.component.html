@@ -1,0 +1,18 @@
+<div id="candidate">
+<mat-form-field>
+  <mat-label>Title</mat-label>
+  <input matInput placeholder="Title" [(ngModel)]="candidate.title">
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <mat-label>Skills</mat-label>
+  <mat-select [formControl]="toppings" multiple>
+    <mat-select-trigger>
+    </mat-select-trigger>
+    <mat-option *ngFor="let topping of allSkills" [value]="topping">{{topping.name}}</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<button mat-button (click)="save()">save</button>
+
+</div>
